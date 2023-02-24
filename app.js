@@ -45,7 +45,7 @@ app.get('/', (req, res) =>{
 //routes
 app.use( '/api/v1/auth', authRouter )
 app.use( '/api/v1/jobs', authenticateUser, jobRouter )
-app.use( '/api/v1/docs', swaggerUI.serve, swaggerUI.setup(docs) )
+app.use( '/api-docs', swaggerUI.serve, swaggerUI.setup(docs) )
 
 app.use(notFoundMiddleware) 
 app.use(errorHandlerMiddleware)
