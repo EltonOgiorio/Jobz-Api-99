@@ -1,11 +1,13 @@
 require('dotenv').config()
 require('express-async-errors')
 
+const docs = require('./docs')
 // extra security packages
 const helmet = require('helmet')
 const cors = require('cors')
 const xss = require('xss-clean')
 const rateLimiter = require('express-rate-limit')
+const swaggerUI = require('swagger-ui-express')
 
 
 
@@ -43,6 +45,7 @@ app.get('/', (req, res) =>{
 //routes
 app.use( '/api/v1/auth', authRouter )
 app.use( '/api/v1/jobs', authenticateUser, jobRouter )
+app.use( 'api/v1/docs', swaggerUI.serve, swaggerUI.setup(docs) )
 
 
 app.use(notFoundMiddleware) 
