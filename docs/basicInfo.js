@@ -7,6 +7,6 @@ module.exports = {
         contact: {
             name: "Elton",
             email: "elton.uyi@gmail.com"
-        }       
-    }
+        },   
+    },
 }
