@@ -1,7 +1,7 @@
 module.exports = {
     servers: [
         {
-            url: "https://jobz-api-99-elton.onrender.com"
+            url: "http://localhost:3000/api/v1"
         }
     ]
 }
