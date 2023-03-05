@@ -1,8 +1,7 @@
 module.exports = {
     servers: [
         {
-            url: "https://jobz-api-99-elton.onrender.com",
-            description: 'Local server'
+            url: "https://jobz-api-99-elton.onrender.com"
         }
     ]
 }
